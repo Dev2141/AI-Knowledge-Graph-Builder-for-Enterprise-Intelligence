@@ -1,4 +1,22 @@
-# AI-Based Knowledge Graph Builder for Enterprise Intelligence
+<div align="center">
+
+# 🧠 Vidzai: AI-Based Knowledge Graph & Hybrid RAG
+
+[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Neo4j](https://img.shields.io/badge/Neo4j-5.x-008CC1?style=for-the-badge&logo=neo4j&logoColor=white)](https://neo4j.com)
+[![Pinecone](https://img.shields.io/badge/Pinecone-Vector_DB-000000?style=for-the-badge)](https://pinecone.io)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.x-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+**Transform unstructured enterprise communications into actionable intelligence through AI-powered knowledge graphs and hybrid RAG retrieval.**
+
+[Features](#key-features) • [Architecture](#architecture) • [Installation](#installation) • [Usage](#running-the-project) • [API](#api-endpoints) • [License](#license)
+
+</div>
+
+---
 
 A full-stack AI system that automatically extracts entities and relationships from large email datasets, builds a semantic knowledge graph, and provides intelligent hybrid retrieval-augmented generation (RAG) for enterprise insights.
 
@@ -10,6 +28,7 @@ This project demonstrates an end-to-end pipeline combining **Neo4j** graph datab
 
 - [Overview](#overview)
 - [Key Features](#key-features)
+- [Screenshots](#screenshots)
 - [Architecture](#architecture)
 - [Tech Stack](#tech-stack)
 - [Prerequisites](#prerequisites)
@@ -66,6 +85,23 @@ The result is a searchable knowledge graph that enables complex business intelli
 - CORS enabled for cross-origin requests
 - Environment-based configuration
 - Error handling and logging
+
+---
+
+## Screenshots
+
+### Interactive Knowledge Graph Visualization
+
+The web interface provides real-time knowledge graph exploration with force-directed layouts, color-coded entity types, and relationship labels.
+
+![Knowledge Graph Visualization](attached_assets/image_1774683490195.png)
+
+**Features shown:**
+- 🔵 **Interactive Graph** — Force-directed 2D visualization with zoom/pan
+- 📝 **Grounded Answers** — LLM responses with inline source citations `(graph fact)` / `(from email)`
+- 📊 **Evidence Panel** — Side-by-side display of graph facts and email snippets
+- ⚡ **Real-time Metrics** — Query latency breakdown (graph, vector, LLM)
+- 🎨 **Color-coded Nodes** — Different colors for People, Organizations, Locations, etc.
 
 ---
 
@@ -563,7 +599,9 @@ Supported models (via Groq/OpenRouter):
 
 ## License
 
-[Your License Here]
+MIT License - Copyright (c) 2026 Vidzai Digital
+
+This software is provided as-is for commercial and personal use. See the [LICENSE](LICENSE) file for full details.
 
 ---
 
@@ -582,6 +620,7 @@ For issues, questions, or contributions:
 
 ## Acknowledgments
 
+- **Created by:** Vidzai Digital
 - Built with [Neo4j](https://neo4j.com/), [Pinecone](https://www.pinecone.io/), and [Groq](https://groq.com/) APIs
 - Uses the [Enron Email Dataset](https://www.cs.cmu.edu/~enron/)
 - Powered by LangChain and various LLM providers

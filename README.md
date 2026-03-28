@@ -12,7 +12,9 @@
 
 **Transform unstructured enterprise communications into actionable intelligence through AI-powered knowledge graphs and hybrid RAG retrieval.**
 
-[Features](#key-features) • [Architecture](#architecture) • [Installation](#installation) • [Usage](#running-the-project) • [API](#api-endpoints) • [License](#license)
+🚀 **[Launch Live Demo](https://final-mocha-iota.vercel.app?_vercel_share=n3eH2deEANt9xxgxC3UG7DPaHsmFKVZP)** — Try the app now!
+
+[Features](#key-features) • [Architecture](#architecture) • [Installation](#installation) • [Usage](#running-the-project) • [API](#api-endpoints) • [Deployment](#deployment) • [License](#license)
 
 </div>
 
@@ -27,6 +29,7 @@ This project demonstrates an end-to-end pipeline combining **Neo4j** graph datab
 ## Table of Contents
 
 - [Overview](#overview)
+- [Live Demo](#live-demo)
 - [Key Features](#key-features)
 - [Screenshots](#screenshots)
 - [Architecture](#architecture)
@@ -38,6 +41,7 @@ This project demonstrates an end-to-end pipeline combining **Neo4j** graph datab
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [API Endpoints](#api-endpoints)
+- [Deployment](#deployment)
 - [Troubleshooting](#troubleshooting)
 - [Example Queries](#example-queries)
 
@@ -55,6 +59,23 @@ The result is a searchable knowledge graph that enables complex business intelli
 - "Who communicated most about natural gas trading?"
 - "What relationships involve FERC regulations?"
 - "Which people are connected to specific projects?"
+
+---
+
+## Live Demo
+
+🎯 **Try the live application now**: [**https://final-mocha-iota.vercel.app**](https://final-mocha-iota.vercel.app?_vercel_share=n3eH2deEANt9xxgxC3UG7DPaHsmFKVZP)
+
+The demo includes:
+- ✅ Pre-populated Enron dataset (1000 emails, 5000+ entities)
+- ✅ Interactive force-directed graph visualization
+- ✅ Hybrid RAG search with graph + vector similarity
+- ✅ Real-time query results with evidence
+
+**Try asking:**
+- "Who communicated about energy?"
+- "What's the relationship between Houston and natural gas?"
+- "Which people mentioned FERC?"
 
 ---
 
@@ -604,6 +625,41 @@ Supported models (via Groq/OpenRouter):
 
 ---
 
+## Deployment
+
+### ✅ Live Demo (Already Deployed!)
+
+**Frontend**: [https://final-mocha-iota.vercel.app](https://final-mocha-iota.vercel.app?_vercel_share=n3eH2deEANt9xxgxC3UG7DPaHsmFKVZP)
+- Hosted on **Vercel** (free tier)
+- Auto-deploys from GitHub on every commit
+- Real-time knowledge graph visualization
+
+**Backend**: Deployed on **Render** (free tier)
+- RESTful API at `/api/query` and `/api/health`
+- Connected to Neo4j Aura and Pinecone
+- Handles hybrid RAG queries
+
+**Database**: Neo4j Aura (free instance)
+- Graph database with 5000+ entities
+- Relationship types for business intelligence
+
+**Vector Search**: Pinecone (free tier)
+- Pre-indexed email embeddings
+- Semantic similarity search
+
+### Deploy Your Own
+
+For detailed deployment instructions, see: [Deployment Guide](https://github.com/Dev2141/deployment#readme)
+
+**Quick Start:**
+1. **Frontend**: Deploy to [Vercel](https://vercel.com)
+2. **Backend**: Deploy to [Render](https://render.com)
+3. **Databases**: Use free tiers of [Neo4j Aura](https://neo4j.com/cloud/aura) + [Pinecone](https://pinecone.io)
+
+All services have free tiers available!
+
+---
+
 ## Future Enhancements
 
 - [ ] Support for additional data sources (documents, chat logs)
@@ -646,5 +702,13 @@ For issues, questions, or contributions:
 
 ---
 
-**Last Updated:** March 28, 2025
+**Last Updated:** March 28, 2026
 **Version:** 1.0.0
+
+<div align="center">
+
+**Built with ❤️ using Neo4j, Pinecone, LangChain, React, and Python**
+
+⭐ Star this repo if you find it useful!
+
+</div>

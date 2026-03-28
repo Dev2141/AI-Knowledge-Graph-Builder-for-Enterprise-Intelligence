@@ -45,9 +45,9 @@ This project demonstrates an end-to-end pipeline combining **Neo4j** graph datab
 
 ## Overview
 
-This system processes enterprise email datasets (built on the Enron Email Dataset) through a sophisticated 3-milestone pipeline:
+This system processes enterprise email datasets (built on the Enron Email Dataset) through a comprehensive 3-milestone pipeline:
 
-1. **Data Preparation**: Load emails into Neo4j
+1. **Data Preprocessing** (Milestone 1): Clean and structure raw email data
 2. **Knowledge Extraction** (Milestone 2): Use LLMs to extract entities and relationships
 3. **Intelligent Querying** (Milestone 3): Hybrid RAG combining graph and vector search
 
@@ -293,9 +293,22 @@ npm run dev
 ```
 .
 ├── README.md                    # This file
+├── LICENSE                      # MIT License (Vidzai Digital)
+├── RESULTS.md                   # Pipeline extraction results
 ├── requirements.txt             # Python dependencies
 ├── .env                         # Environment variables (git-ignored)
 ├── .gitignore                   # Git ignore rules
+│
+├── Milestone-1/                 # Data preprocessing pipeline
+│   ├── enron_preprocessing_pipeline.py
+│   └── final_dataset/           # Processed datasets
+│       ├── emails.csv
+│       ├── employees.csv
+│       ├── communications.csv
+│       ├── aggregated_communications.csv
+│       ├── email_enrichment_features.csv
+│       ├── employee_metrics.csv
+│       └── README.md
 │
 ├── Milestone-2.py              # Entity extraction pipeline
 ├── MIlestone-3.py              # Hybrid RAG query interface
@@ -315,16 +328,22 @@ npm run dev
 │   │   └── styles/             # CSS/Tailwind styles
 │   └── dist/                   # Built assets
 │
-├── attached_assets/            # Static resources
-└── result.txt                  # Sample pipeline output logs
+└── attached_assets/            # Static resources (git-ignored)
 ```
 
 ---
 
 ## How It Works
 
-### Phase 1: Preparation
-1. Load email dataset into Neo4j as `Email` nodes
+### Phase 0: Data Preprocessing (Milestone-1)
+1. Load raw Enron email dataset
+2. Clean and structure email data
+3. Extract employee information and communications
+4. Generate aggregated communication metrics
+5. Create processed datasets (emails.csv, employees.csv, communications.csv)
+
+### Phase 1: Data Preparation
+1. Load processed email dataset into Neo4j as `Email` nodes
 2. Each email contains: `message_id`, `subject`, `body`
 
 ### Phase 2: Knowledge Extraction (Milestone-2.py)

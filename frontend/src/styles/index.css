@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-900 text-slate-200 antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-surface-800/60 backdrop-blur-md border border-white/5;
+  }
+
+  .glass-hover {
+    @apply hover:bg-surface-700/60 hover:border-white/10 transition-all duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .section-title {
+    @apply text-xs font-semibold uppercase tracking-widest text-slate-500 mb-3;
+  }
+
+  .fact-row {
+    @apply flex items-start gap-2 py-1.5 border-b border-white/5 last:border-0 text-sm text-slate-300;
+  }
+
+  .snippet-card {
+    @apply p-3 rounded-lg bg-surface-700/50 border border-white/5 text-sm text-slate-400 leading-relaxed;
+  }
+}
+
+/* Markdown answer styles */
+.answer-content h1, .answer-content h2, .answer-content h3 {
+  @apply text-slate-100 font-semibold mt-4 mb-2;
+}
+.answer-content h2 { @apply text-lg; }
+.answer-content h3 { @apply text-base; }
+.answer-content p { @apply text-slate-300 leading-relaxed mb-3; }
+.answer-content strong { @apply text-slate-100 font-semibold; }
+.answer-content em { @apply text-accent-cyan; }
+.answer-content ul, .answer-content ol { @apply pl-5 mb-3 space-y-1; }
+.answer-content li { @apply text-slate-300; }
+.answer-content ul li { @apply list-disc; }
+.answer-content ol li { @apply list-decimal; }
+.answer-content code { @apply font-mono text-xs bg-surface-700 text-accent-cyan px-1 py-0.5 rounded; }
+.answer-content blockquote { @apply pl-3 border-l-2 border-accent-blue text-slate-400 italic; }
+.answer-content hr { @apply border-white/10 my-4; }
+
+/* Force graph canvas */
+.force-graph-container canvas {
+  border-radius: 0.75rem;
+}
+
+/* Loading shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #0d1526 25%, #162340 50%, #0d1526 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
